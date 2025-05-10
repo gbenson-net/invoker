@@ -8,6 +8,11 @@ import (
 // ExecInvoker invokes commands using [exec.Command].
 type ExecInvoker struct{}
 
+// Exec invokes commands using [exec.Command].
+var Exec = Invoker(&defaultExecInvoker)
+
+var defaultExecInvoker ExecInvoker
+
 // Invoke implements the Invoker interface.
 func (e *ExecInvoker) Invoke(
 	ctx context.Context,

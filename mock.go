@@ -20,7 +20,7 @@ type MockInvoker struct {
 	expectations []*mockInvocation
 }
 
-// NewMock returns a new MockInvoker.
+// NewMock creates a MockInvoker for testing.
 func NewMock(t TestingT) *MockInvoker {
 	return &MockInvoker{t: t}
 }
